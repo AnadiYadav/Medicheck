@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicheck</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+
+  <body class="static-background">
+    
+    <nav class="navbar">
+      <div class="navbar-container">
+          <img src="medicheck-high-resolution-logo-white-transparent.png" alt="">
+          <h1><a href="index.html">MediCheck</a></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index2.html" >Get Started</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://talkit-zkph.onrender.com">Discussion</a></li>
+        <li><a href="index.html#footer">Contact Us</a></li>
+      
+      </ul>
+      <div class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+  </nav>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const menuToggle = document.querySelector('.menu-toggle');
+          const navLinks = document.querySelector('.nav-links');
+
+          menuToggle.addEventListener('click', () => {
+              navLinks.classList.toggle('active');
+          });
+      });
+  </script>
+
+    <div class="container">
+      <h1>Know Your Medicine !</h1>
+    
+
+      <div class="drop">
+        <label for="select-el">How you want to upload Image? (Max Size - 600Kb)</label>
+        <select id="select-el">
+          <option disabled selected value>Select an option</option>
+          <option value="1">Open Camera</option>
+          <option value="2">Upload Image</option>
+        </select>
+        <br /><br /><br />
+      <div>
+        <label for="med-name">Medicine Name (Optional)</label>
+        <input type="text" id="med-name" placeholder="Enter the Medicine name if you know">
+      </div>
+        <div id="capturedImg-preview"></div>
+      </div>
+      <button id="search-button">Search</button>
+    </div>
+    <div class="result">
+      <!-- <h4>Result</h4> -->
+      <p></p>
+    </div>
+    <div>
+      <footer id="footer">
+        <h2>&copy;2024 MediCheck – All rights reserved.</h2>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

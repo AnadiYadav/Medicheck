@@ -1,0 +1,508 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.static-background {
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(45deg, rgb(142, 157, 229), rgb(255, 255, 255), rgb(138, 235, 167)); /* Lighter RGB colors */
+  }
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding-top: 60px;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  /* padding-bottom: 10px; */
+  text-align: center;
+ 
+}
+
+.result{
+  text-align: center;
+  font-size: x-large;
+  /* margin: 20px 20px 20px 20px; */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+select{
+  color: black;
+  background-color: #ffffff;
+  font-weight: bold;
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  width: calc(100% - 20px);
+  
+}
+
+select:hover {
+  background: #e6e6e6b4;
+  transition: background 0.3s ease-in-out;
+}
+
+#med-name{
+  color: black;
+  background-color: #ffffff;
+  font-weight: bold;
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  width: calc(100% - 20px);
+  margin-bottom: 30px;
+  border-width: 3px;
+  border-color: black;
+}
+
+#med-name:hover{
+  background: #e6e6e6b4;
+  transition: background 0.3s ease-in-out;
+}
+
+.input-option {
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  background-color: #2963a2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 13px 26px;
+  border-radius: 35px;
+}
+
+.file-label:hover {
+  background: #0f4e93;
+  transition: background 0.3s ease-in-out;
+}
+
+.preview-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  border: 5px solid #ccc;
+  overflow: hidden;
+  
+}
+label{
+  /* margin: 20px 50px 20px 50px; */
+  margin-right: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.preview-container img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+button {
+  padding: 13px 26px;
+  background-color: #16a083;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  border-radius: 35px;
+  margin: 10px 10px 10px 10px;
+}
+button:hover {
+background: #117964;
+
+  transition: background 0.3s ease-in-out;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+.navbar {
+  background-color: #006d77; /* Dark cyan */
+  padding: 15px 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar-container{
+  display: flex;
+  flex-direction: row;
+}
+.navbar-container a {
+  color: white;
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 35px;
+  flex: 1 1 auto;
+  font-weight: bold;
+  font-weight: 300;
+  /* font-size: x-large; */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.navbar-container img{
+  height: 60px;
+  width: 60px;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.nav-links li a:hover {
+  background-color: #41e0d0; /* Soft mint green */
+  color: #edf6f9; /* Light cyan */
+  transform: rotate(360deg) scale(1.2); /* Rotate and enlarge */
+  z-index: 100; /* Bring the hovered link forward */
+}
+
+/* Hamburger Menu Styles for Mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #006d77;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 15px;
+}
+
+.nav-links.active li a {
+  padding: 10px;
+  text-align: center;
+}
+
+/* ............//// Showcase styling ////......... */
+
+.showcase-area {
+height: 50vh;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.showcase-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+font-size: 1.6rem;
+background-color: #c9f1e9;
+}
+
+.main-title {
+text-transform: uppercase;
+margin-top: 1.5em;
+padding-top: 1.5em;
+}
+
+/* ......//about us//...... */
+
+#about {
+padding: 50px 0;
+background: #eee7e7;
+}
+
+.about-wrapper {
+display: flex;
+flex-wrap: wrap;
+}
+
+#about h2 {
+font-size: 2.3rem;
+}
+
+#about p {
+font-size: 1.2rem;
+color: #555;
+}
+
+#about .small {
+font-size: 1.2rem;
+color: #666;
+font-weight: 600;
+}
+
+.about-img {
+flex: 1 1 400px;
+padding: 30px;
+transform: translateX(150%);
+animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation {
+100% {
+  transform: translate(0);
+}
+}
+
+.about-text {
+flex: 1 1 400px;
+padding: 30px;
+margin: auto;
+transform: translate(-150%);
+animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation {
+100% {
+  transform: translate(0);
+}
+}
+
+.about-img img {
+display: block;
+height: 400px;
+max-width: 100%;
+margin: auto;
+object-fit: cover;
+object-position: right;
+}
+
+/* ..........////plant category///........... */
+
+
+
+
+/* .........../plant Menu/............ */
+
+.work-heading {
+text-align: center;
+font-size: 3.4rem;
+font-weight: 350;
+color: #666;
+padding: 1em;
+}
+
+.work-container {
+display: flex;
+flex-wrap: wrap;
+padding: 50px 0px 30px 0px;
+background-color: #eff0dc;
+}
+
+.work-container img {
+display: block;
+width: 250px;
+height: 250px;
+border-radius: 50%;
+object-fit: cover;
+object-position: center;
+}
+
+.work-item {
+display: flex;
+flex: 1 1 600px;
+justify-content: space-evenly;
+margin-bottom: 3rem;
+}
+
+
+.font-title {
+font-size: 1.8rem;
+font-weight: 400;
+color: #444;
+}
+
+
+/* ........ Contact Us........... */
+#footer h2 {
+text-align: center;
+font-size: 1.8rem;
+padding: 2.6rem;
+font-weight: 500;
+margin-top: 287px;
+color: #fff;
+background: rgb(65, 65, 65);
+}
+
+#footer h2:hover {
+color: #c0c5ce;
+transition: color 0.15s ease-in-out;
+text-decoration-thickness: 100;
+}
+
+/* ......../ media query /.......... */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+}
+
+.menu-toggle {
+    display: flex;
+}
+
+/* Simplified hover effect for mobile */
+.nav-links li a:hover {
+    transform: none; /* No rotate or enlarge on mobile */
+    background-color: #83c5be;
+}
+}
+
+/* Animation for Menu Toggle Bars */
+.menu-toggle.active .bar:nth-child(1) {
+transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Additional Functionality: Pulse Animation on Active Menu Items */
+.nav-links li a.active {
+animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(0);
+}
+50% {
+    transform: scale(2);
+}
+100% {
+    transform: scale(2);
+}
+}
+/* ......./ plant /......... */
+
+.plant-container {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.plant-type:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.plant-type {
+  box-shadow: 5px 5px 10px 0 #aaa;
+}
+
+.img-container {
+  margin: 0;
+}
+
+
+@media (max-width: 500px) {
+html {
+  font-size: 65%;
+}
+
+.navbar .menu-items li{
+    font-size: 1.6rem;
+}
+
+.work
+-container img {
+  margin: auto;
+}
+
+.work
+-item {
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-container {
+  width: 90%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-img {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.logo {
+  position: absolute;
+  top: 06px;
+  right: 15px;
+  font-size: 3rem;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+.img-container h3 {
+  font-size: 1.5rem;
+}
+
+.img-container .btn {
+  font-size: 0.7rem;
+}
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+.showcase-area {
+  height: 50vmax;
+}
+}
